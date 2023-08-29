@@ -132,8 +132,31 @@ a {
   list-style: none;
   padding-left: 0;
   color: var(--color-black);
+  font-size: 2rem;
 }
 
 .list--inline .list__item {
+  /* this means that all .list__item just inside .list--inline */
   display: inline-block;
+  margin-right: 2rem;
+}
+
+.list--tick {
+  list-style-image: url(../SVG/tick.svg);
+  padding-left: 3rem;
+}
+
+.list--tick .list__item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .list {
+    font-size: 1.8rem;
+  }
+
+  .list--tick .list__item {
+    padding-left: 0.2;
+  }
 }
