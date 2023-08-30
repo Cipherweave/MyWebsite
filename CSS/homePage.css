@@ -6,12 +6,15 @@
   --color-white: white;
   --color-gray: #2e343a;
   --color-black: black;
+  --color-border: #ccc;
+  border-radius: 30ps;
 }
 
 *,
 *::after,
 *::before {
   box-sizing: border-box;
+  /* border box means doesnt matter how much padding or border we add box stayed in the same dimentions of width and height*/
 }
 
 /* TYPOGRAPHY -----------------------------*/
@@ -252,3 +255,44 @@ a {
     font-size: 1.5rem;
   }
 }
+
+
+/* INPUTS----------------- */
+
+.input{
+  border-radius: 30px;
+  padding: 1.5rem 3.5rem;
+  border: 1px solid var(--color-border);
+  outline: 0;
+  font-size: 2rem;
+}
+
+::placeholder{
+  color: #cdcbd7;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
+    font-size: 1.5rem;
+  }
+}
+
+
+.input-group {
+  border: 1px solid var(--color-border);
+  border-radius: 30px;
+  display: flex; 
+}
+
+/* for the objets that have both .input-group and .input at the same time */
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+  /* we do this to reduce the padding of input */
+}
+
+.input-group .btn {
+  margin: 4px 4px;
+}
+
