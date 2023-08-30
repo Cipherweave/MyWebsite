@@ -15,6 +15,8 @@
 *::before {
   box-sizing: border-box;
   /* border box means doesnt matter how much padding or border we add box stayed in the same dimentions of width and height*/
+
+  overflow: hidden;
 }
 
 /* TYPOGRAPHY -----------------------------*/
@@ -244,7 +246,6 @@ a {
   border: 2px solid black;
 }
 
-
 .btn--outline:hover {
   background-color: black;
   color: white;
@@ -256,10 +257,9 @@ a {
   }
 }
 
-
 /* INPUTS----------------- */
 
-.input{
+.input {
   border-radius: 30px;
   padding: 1.5rem 3.5rem;
   border: 1px solid var(--color-border);
@@ -267,7 +267,7 @@ a {
   font-size: 2rem;
 }
 
-::placeholder{
+::placeholder {
   color: #cdcbd7;
 }
 
@@ -277,11 +277,10 @@ a {
   }
 }
 
-
 .input-group {
   border: 1px solid var(--color-border);
   border-radius: 30px;
-  display: flex; 
+  display: flex;
 }
 
 /* for the objets that have both .input-group and .input at the same time */
@@ -296,3 +295,25 @@ a {
   margin: 4px 4px;
 }
 
+/* CARDS */
+
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+}
+
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
+}
+
+/* means edit .card__header when we have .card--primary */
+.card--primary .card__header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.card--seconday .card__header {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
