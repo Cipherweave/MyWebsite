@@ -126,6 +126,7 @@ a {
 
 .badge--small {
   font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -168,7 +169,7 @@ a {
   }
 
   .list--tick .list__item {
-    padding-left: 0.2;
+    padding-left: 0.2rem;
   }
 }
 
@@ -316,4 +317,71 @@ a {
 .card--seconday .card__header {
   background-color: var(--color-secondary);
   color: var(--color-white);
+}
+
+/* PLANS */
+
+.plan__name {
+  color: white;
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+.plan__price {
+  font-size: 6rem;
+}
+
+.plan__billing-cycle {
+  font-size: 2.4rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-right: 1rem;
+}
+
+.card--seconday .badge--secondary {
+  background-color: #dc32dc;
+}
+
+.card--primary .badge--secondary {
+  background-color: #15b215;
+}
+
+.plan__discription {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.plan .list__item {
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.plan--pupolar .card__header{
+  position: relative;
+}
+
+.plan--pupolar .card__header::before{
+  content: url(../SVG/popular.svg);
+  bottom: 10;
+  width: 40px;
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: 5%;
+} 
+
+@media screen and (min-width: 1024px) {
+  .plan__name {
+    font-size: 1.4;
+  }
+  .plan__price {
+    font-size: 5rem;
+  }
+
+  .plan__billing-cycle {
+    font-size: 1.6rem;
+  }
 }
