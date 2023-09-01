@@ -105,7 +105,7 @@ a {
   }
 }
 
-/* Badges -----------------------*/
+/* BADGES ---------------------------------*/
 
 .badge {
   border-radius: 20px;
@@ -139,7 +139,7 @@ a {
   }
 }
 
-/* LISTS -----------------------*/
+/* LISTS ----------------------------------------*/
 
 .list {
   list-style: none;
@@ -155,7 +155,7 @@ a {
 }
 
 .list--tick {
-  list-style-image: url(../SVG/tick.svg);
+  list-style-image: url("../SVG/tick.svg");
   padding-left: 3rem;
 }
 
@@ -174,7 +174,7 @@ a {
   }
 }
 
-/* ICONS ----------------------- */
+/* ICONS -------------------------------------------- */
 
 .icon {
   width: 40px;
@@ -196,7 +196,20 @@ a {
   align-items: center;
 }
 
-/* BUTTOMS ----------------------- */
+.icon-container--accent {
+  background-color: var(--color-accent);
+}
+
+.icon--white {
+  fill: var(--color-white);
+}
+
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
+/* BUTTOMS ------------------------------------ */
 
 .btn {
   font-size: 1.8rem;
@@ -253,13 +266,18 @@ a {
   color: white;
 }
 
+.btn--stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
   }
 }
 
-/* INPUTS----------------- */
+/* INPUTS ----------------------------------------- */
 
 .input {
   border-radius: 30px;
@@ -297,7 +315,7 @@ a {
   margin: 4px 4px;
 }
 
-/* CARDS */
+/* CARDS -----------------------------------------*/
 
 .card {
   border-radius: 7px;
@@ -320,7 +338,7 @@ a {
   color: var(--color-white);
 }
 
-/* PLANS */
+/* PLANS ------------------------------------*/
 
 .plan__name {
   color: white;
@@ -360,11 +378,11 @@ a {
   margin-bottom: 2rem;
 }
 
-.plan--pupolar .card__header{
+.plan--pupolar .card__header {
   position: relative;
 }
 
-.plan--pupolar .card__header::before{
+.plan--pupolar .card__header::before {
   content: url(../SVG/popular.svg);
   bottom: 10;
   width: 40px;
@@ -372,7 +390,7 @@ a {
   position: absolute;
   top: -6px;
   right: 5%;
-} 
+}
 
 @media screen and (min-width: 1024px) {
   .plan__name {
@@ -387,56 +405,49 @@ a {
   }
 }
 
+/* MEDIA ---------------------------------------- */
 
-
-/* MEDIA------------------------------- */
-
-
-.media{
+.media {
   display: flex;
 }
 
-
-.media__title{
+.media__title {
   margin-top: 0;
 }
 
-.media__body{
+.media__body {
   margin: 0 2rem;
 }
 
-
-.media__image{
+.media__image {
   margin-top: 2rem;
 }
 
-
 /* QUOTES */
 
-.quote{
+.quote {
   font-size: 3rem;
   font-style: italic;
   color: var(--color-darker);
   line-height: 1.3;
 }
 
-.quote__text::before{
+.quote__text::before {
   content: open-quote;
 }
 
-.quote__text::after{
+.quote__text::after {
   content: close-quote;
 }
 
-
-.quote__author{
+.quote__author {
   font-size: 3rem;
   font-weight: 500;
   font-style: normal;
   margin-bottom: 0;
 }
 
-.quote__company-name{
+.quote__company-name {
   color: black;
   opacity: 40%;
 }
@@ -446,35 +457,106 @@ a {
   bottom: 15px;
 }
 
-
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .quote {
     font-size: 2rem;
   }
 
-  .quote__author{
+  .quote__author {
     font-size: 2.4rem;
   }
 
-  .quote__company-name{
+  .quote__company-name {
     font-size: 1.6rem;
   }
 }
 
-/* GRIDS */
+/* GRIDS ----------------------------------------*/
 
-.grid{
+.grid {
   display: grid;
 }
 
-
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* TESTEMONIALS ------------------------------------------ */
+
+.testimonial {
+  padding: 3rem;
+}
+
+.testimonial__image {
+  position: relative;
+}
+
+.testimonial__image > img {
+  width: 100%;
+}
+
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 2.4rem;
+  }
+
+  .testimonial .quote {
+    margin-left: 6rem;
+  }
+}
+
+/* CALLOUTS------------------------------ */
+
+.callout {
+  border-radius: 5px;
+  padding: 4rem;
+}
+
+.callout--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.callout__heading {
+  color: var(--color-white);
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.callout .btn {
+  justify-self: center;
+  align-self: center;
+}
+
+.callout__content {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout__content {
+    text-align: left;
+  }
+
+  .callout .btn {
+    justify-self: start;
+    margin: 0 2rem;
   }
 }
