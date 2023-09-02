@@ -598,3 +598,47 @@ a {
   transition: all 0.3;
   opacity: 1;
 }
+
+/* BLOCK----------------------------------------- */
+
+.block {
+  --padding-vertical: 6rem;
+  /* go to block-skewed-left */
+  padding: var(--padding-vertical) 2rem;
+}
+
+.block__heading {
+  margin-top: 0;
+}
+
+.block--dark {
+  background-color: var(--color-black);
+  color: #7b858b;
+}
+
+.block--dark .block__heading {
+  color: var(--color-white);
+}
+
+.block--skewed-left {
+  padding-bottom: calc(var(--padding-vertical) + 6rem);
+  /* we say how ever we put the padding .block it also changes here 
+  insted of us changing it over and over again */
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+
+.block--skewed-right {
+  padding-bottom: calc(var(--padding-vertical) + 6rem);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 80%);
+}
+
+
+.block__header {
+  text-align: center;
+}
+
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
